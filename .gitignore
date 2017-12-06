@@ -1,6 +1,4 @@
 tehstomp-*
 tx-events/
-broker
-client
-consumer
-producer
+bin/
+

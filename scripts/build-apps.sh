@@ -9,10 +9,12 @@ function do_error () (
     exit 1
 )
 
+mkdir -p bin/
+
 # Builds the client and server applications
 (cd tehstomp-server && make build && cd ..)|| do_error
-ln -s tehstomp-server/StompBroker broker|| do_error
+cp tehstomp-server/StompBroker bin/broker|| do_error
 (cd tehstomp-client && make && cd ..) || do_error
-ln -s tehstomp-client/StompClient client || do_error
-ln -s tehstomp-client/Producer producer || do_error
-ln -s tehstomp-client/Consumer consumer || do_error
+cp tehstomp-client/StompClient bin/client || do_error
+cp tehstomp-client/Producer bin/producer || do_error
+cp tehstomp-client/Consumer bin/consumer || do_error

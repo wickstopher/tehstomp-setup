@@ -1,6 +1,6 @@
 # tehstomp-setup
 
-build: clean
+build:
 	scripts/build-apps.sh
 	@echo ""
 	@echo "Applications successfully built and linked!"
@@ -10,13 +10,18 @@ clone:
 	@echo ""
 	@echo "Repositories successfully cloned!"
 
+update:
+	scripts/update-repos.sh
+	@echo ""
+	@echo "Repositories are up to date!"
+
 install:
 	scripts/install-libs.sh
 	@echo ""
 	@echo "Libraries successfully installed!"
 
 clean:
-	rm -f broker client producer consumer *.log
+	rm -rf bin *.log
 
 destroy: clean
 	rm -rf tehstomp-client tehstomp-server tehstomp-lib tx-events
