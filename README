@@ -1,17 +1,19 @@
 
-+++ tehstomp +++
++++ tehstomp-setup +++
+
+This repository contains some simple scripts provided in the scripts/ directory 
+whose executioncan be automated using the provided Makefile for building and 
+installing the tehstomp family of shared libraries and applications.
+
 
 Install libraries and build applications
 =========================================
-
-There are some simple scripts provided in the scripts/ directory whose execution
-can be automated using the provided Makefile.
 
 * make clone
     Running this will clone all of the necessary repos to the correct location.
 
 * make update
-    Running this will update all repositories to the latest version.
+    (Optional) Running this will update all repositories to the latest version.
 
     NOTE: You must run 'make clone' prior to running 'make update'
 
@@ -27,6 +29,9 @@ can be automated using the provided Makefile.
     that can be run from this directory: broker and client
 
     NOTE: You must run 'make install' prior to running 'make build'
+
+Cleanup
+=======
 
 * make clean
     Running this will clean up build artifacts in the working directory. It does not
