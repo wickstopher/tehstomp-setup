@@ -1,0 +1,38 @@
+
++++ tehstomp +++
+
+Install libraries and build applications
+=========================================
+
+There are some simple scripts provided in the scripts/ directory whose execution
+can be automated using the provided Makefile.
+
+* make clone
+    Running this will clone all of the necessary repos to the correct location.
+
+* make install
+    Running this will install the necessary libraries for building the client
+    and server applications. This assumes an up-to-date version of the
+    Haskell platform installed on the system.
+
+    NOTE: You must run 'make clone' prior to running 'make install'
+
+* make build
+    Running this will build the client and broker, and install symlinks to the applications
+    that can be run from this directory: broker and client
+
+    NOTE: You must run 'make install' prior to running 'make build'
+
+Initialize the message broker
+=============================
+
+./broker [port]
+
+Initialize the CLI client application
+=====================================
+
+./client
+
+Using the CLI client application
+================================
+connect localhost [port]
