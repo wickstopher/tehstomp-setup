@@ -1,4 +1,4 @@
-
+# tehstomp-setup
 
 build: clean
 	scripts/build-apps.sh
@@ -16,7 +16,7 @@ install:
 	@echo "Libraries successfully installed!"
 
 clean:
-	rm -f broker client producer consumer
+	rm -f broker client producer consumer *.log
 
 destroy: clean
 	rm -rf tehstomp-client tehstomp-server tehstomp-lib tx-events

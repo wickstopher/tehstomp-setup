@@ -23,6 +23,15 @@ can be automated using the provided Makefile.
 
     NOTE: You must run 'make install' prior to running 'make build'
 
+* make clean
+    Running this will clean up build artifacts in the working directory. It does not
+    clean out any of the sub-repositories that are checked out via 'make clone'.
+
+* make destroy
+    Runs a 'make clean' and additionally removes all of the cloned repositories.
+
+    NOTE: This does NOT uninstall the libraries from your system.
+
 Initialize the message broker
 =============================
 
