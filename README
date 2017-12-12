@@ -2,7 +2,7 @@
 +++ tehstomp-setup +++
 
 This repository contains some simple scripts provided in the scripts/ directory 
-whose executioncan be automated using the provided Makefile for building and 
+whose execution can be automated using the provided Makefile for building and 
 installing the tehstomp family of shared libraries and applications.
 
 
@@ -54,13 +54,34 @@ Build artifacts
 Initialize the message broker
 =============================
 
-broker [port]
+bin/broker [port]
 
 Initialize the CLI client application
 =====================================
 
-client
+bin/client
 
-Using the CLI client application
-================================
-connect localhost [port]
+Client Application Comands
+==========================
+
+Command                       Description
+-------                       -----------
+session                       Display information about the active session
+subs                          Display information about the active subscriptions
+connect <host> <ip>           Connect to the STOMP broker at the given host/ip
+disconnect                    Gracefully terminate the active session
+send <dest> <msg>             Send a message to the given destination
+sendr <dest> <rid> <msg>      Send a message to the given destination and request a
+                              receipt with the given receipt ID
+loopsend <n> <dest> <msg>     Send a message n times to the given destination
+subscribe <dest>              Subscribe to the given destination
+unsubscribe <dest>|<subid>    Unsubscribe from the given destination; supports passing
+                              either the destination name or subscription ID
+begin <txid>                  Begin a transaction using the given transaction ID;
+                              all send and sendr requests will be added to the transaction
+                              until it is either commited or aborted
+commit <txid>                 Commit the in-progress transaction
+abort <txid>                  Abort the in-progress transaction
+exit                          Gracefully terminate the active session and exit
+                              the application
+help                          Display this help text
