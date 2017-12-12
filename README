@@ -95,13 +95,13 @@ that the STOMP broker is located at localhost:2323, which is the default
 configuration for the broker application.
 
  * producer
-   + A simple producer application that pummps out messages to
-     a specified destination
+   + A simple producer application that pumps out the given
+     number of messages to the specified destination
    + Usage: bin/producer <dest> <n>
 
  * consumer
    + A simple consumer application that consumes messages on
-     a specified destination
+     the specified destination
    + Usage: bin/consumer <dest>
 
  * hb-good
