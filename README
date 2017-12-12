@@ -85,3 +85,35 @@ abort <txid>                  Abort the in-progress transaction
 exit                          Gracefully terminate the active session and exit
                               the application
 help                          Display this help text
+
+
+Supplemental Client Applications
+================================
+
+All supplemental client applications are for testing purposes and assume
+that the STOMP broker is located at localhost:2323, which is the default
+configuration for the broker application.
+
+ * producer
+   + A simple producer application that pummps out messages to
+     a specified destination
+   + Usage: bin/producer <dest> <n>
+
+ * consumer
+   + A simple consumer application that consumes messages on
+     a specified destination
+   + Usage: bin/consumer <dest>
+
+ * hb-good
+   + A simple client that demonstrates bi-directional heart-beating with
+     the server.
+
+ * hb-bad-client
+   + A simple client that demonstrates a situation in which bi-directional
+     heart-beating is requested, but the client never sends a heart-beat,
+     and as such is disconnected.
+
+ * hb-server-timeout
+   + A simple client that demonstrates a situation in which the client does
+     not give the server sufficient time to respond with a heart-beat, and
+     as such disconnects itself.

@@ -18,3 +18,7 @@ cp tehstomp-server/StompBroker bin/broker|| do_error
 cp tehstomp-client/StompClient bin/client || do_error
 cp tehstomp-client/Producer bin/producer || do_error
 cp tehstomp-client/Consumer bin/consumer || do_error
+cp tehstomp-client/HeartBeatGood bin/hb-good || do_error
+cp tehstomp-client/HeartBeatGood bin/hb-good || do_error
+cp tehstomp-client/HeartBeatBadClient bin/hb-bad-client || do_error
+cp tehstomp-client/HeartBeatServerTimeout bin/hb-server-timeout || do_error
