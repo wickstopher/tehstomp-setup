@@ -50,6 +50,9 @@ Build artifacts
     + client - A CLI STOMP client
     + producer - A simple producer client
     + consumer - A simple consumer client
+    + hb-good - A simple for demonstrating successful bi-directional heart-beats
+    + hb-bad-client - A simple client for demonstrating failed bi-directional heart-beats
+    + hb-server-timeout - A simple demo client for demonstrating failed bi-directional heart-beats
 
 Initialize the message broker
 =============================
